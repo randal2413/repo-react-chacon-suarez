@@ -2,9 +2,7 @@ import "./Card.css"
 
 function Card({nombre, precio, descripcion, img}){
     return(
-        <div >
-            <div>
-            </div>
+        <div>
             <div>
                 <div className="card">
                     <div className="card-img">

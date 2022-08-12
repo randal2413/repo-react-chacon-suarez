@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "./Card.js";
 import dataProductos from "./data.js";
+import "./Card.css"
+
 
 
 function getProductos(){
     return new Promise((resolve) => {
-        setTimeout(() => resolve(dataProductos), 500)
+        setTimeout(() => resolve(dataProductos), 2000)
     })
 }
 
@@ -19,8 +21,7 @@ React.useEffect(() => {
 }, [])
 
 return(
-    <div>
-        <h3>lista</h3>
+    <div className="menu">
         {dataProductos.map((element) => {
             return (
                 <Card
@@ -28,7 +29,7 @@ return(
                 img={element.img}
                 nombre={element.nombre}
                 descripcion={element.descripcion}
-                precio={Element.precio}
+                precio={element.precio}
                 />
             )
         })}
