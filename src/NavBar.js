@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css";
+import Carro from './CardWidget';
 
 
 function NavBar() {
@@ -11,6 +12,7 @@ function NavBar() {
           <li className="li">ROPA HOMBRE</li>
           <li className="li">ROPA MUJER</li>
           <li className="li">ROPA NIÑOS</li>
+          <Carro/>
         </ul>
       </div>
     );

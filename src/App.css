@@ -12,6 +12,27 @@ background-color: #c2ede1;
   font-size: 1.5rem;
 }
 
+.nav-carro{
+  margin-top: 30px;
+    padding-top: 5px;
+    background-color: #c2ede1;
+    border: none;
+    transition: 0.2s all;
+
+}
+.nav-carro:active{
+  transform: scale(1.2);
+}
 .li{
   padding-top: 40px;
 }
+
+.boton-contador{
+  border: solid black;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 640px;
+  margin-right: 700px;}
+
