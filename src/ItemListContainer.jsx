@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import Card from "./Card.js";
 import dataProductos from "./data.js";
 import "./Card.css"
@@ -7,7 +7,7 @@ import "./Card.css"
 
 function getProductos(){
     return new Promise((resolve) => {
-        setTimeout(() => resolve(dataProductos), 2000)
+        setTimeout(() => resolve(dataProductos), 0)
     })
 }
 
@@ -37,4 +37,4 @@ return(
 )
 }
 
-export default ItemListContainer;
+export default ItemListContainer; 

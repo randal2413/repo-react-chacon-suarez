@@ -1,0 +1,46 @@
+.detalleProducto{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "imagen detalle";
+    padding-left: 332px;
+    padding-right: 285px;
+}
+
+.img{
+    grid-area: imagen;
+    padding-left: 110px;
+
+}
+
+.detalle{
+    grid-area: detalle;
+
+}
+
+.boton-talle{
+    margin-right: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.2s all;
+
+}
+
+.boton-talle:active{
+    transform: scale(1.2);
+
+}
+
+.boton-carrito{
+    margin-top: 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.2s all;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+.boton-carrito:active{
+    transform: scale(1.2);
+
+}
+

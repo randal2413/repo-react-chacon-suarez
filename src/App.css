@@ -25,6 +25,13 @@ background-color: #c2ede1;
 }
 .li{
   padding-top: 40px;
+  text-decoration: none;
+  transition: 0.2s all;
+}
+
+.li:active{
+  transform: scale(1.2);
+
 }
 
 .boton-contador{
