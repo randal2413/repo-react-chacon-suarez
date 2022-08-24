@@ -1,32 +1,45 @@
 import dataProductos from "./data"
 import React from "react"
 import ItemDetail from "./ItemDetail"
+import { useParams } from "react-router-dom"
 
 function TraerProductos(){
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(dataProductos[0]), 0)
-    })
-}
+    const [data, setData] = React.useState([])
 
- function ItemDetailContainer() {
-    const [dataProductos, setData] = React.useState([])
+    
+    const idUrl = useParams.id
+   
+
+
+
+
+ const ItemDetailContainer = () => {
+    return new Promise((resolve) => {
+
+        let itemEncontrado = dataProductos.find((element) => element.id = idUrl)
+        resolve(itemEncontrado)   
+    })
+ }
+
+
+    
 
 React.useEffect(() => {
-    TraerProductos().then((respuesta) =>{
-        setData(respuesta)
-    })
+    ItemDetailContainer().then((respuesta) =>
+        setData(respuesta))
+        .catch((error) => alert(error))
 }, [])
 
 return(
     <div > 
             
                 <ItemDetail 
-                key={dataProductos.id}
-                img={dataProductos.img}
-                nombre={dataProductos.nombre}
-                descripcion={dataProductos.descripcion}
-                precio={dataProductos.precio}
-                id={dataProductos.id}
+                key={data.id}
+                img={data.img}
+                nombre={data.nombre}
+                descripcion={data.descripcion}
+                precio={data.precio}
+                id={data.id}
                 />
             
         
@@ -35,4 +48,4 @@ return(
 )
 }
 
-export default ItemDetailContainer
+export default TraerProductos

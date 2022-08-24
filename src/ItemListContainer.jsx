@@ -30,6 +30,7 @@ return(
                 nombre={element.nombre}
                 descripcion={element.descripcion}
                 precio={element.precio}
+                id={element.id}
                 />
             )
         })}

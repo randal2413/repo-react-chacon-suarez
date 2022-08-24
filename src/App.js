@@ -1,21 +1,23 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './NavBar';
 import ItemCount from './ItemCount';
 import "./Card.css";
-import ItemDetailContainer from './ItemDetailContainer';
+import TraerProductos from './ItemDetailContainer';
 import ItemListContainer from './ItemListContainer';
 
 function App() {
   return (
     <div>
-    <NavBar/>
+    
+   <BrowserRouter>
+   <NavBar/>
     <h1 className="destacados">DESTACADOS</h1>
-    <section className='menu'>
-    <ItemListContainer/>
-    </section>
-    <h1 className="destacados">DETALLE</h1>
-
-    <ItemDetailContainer/>
+<Routes>
+    <Route path='/' element={<ItemListContainer/>}></Route>
+    <Route path='/detalle/:id' element={<TraerProductos/>} />
+    </Routes>
+    </BrowserRouter>
     <br/>
     <ItemCount initial={1} stock={12} />
 
