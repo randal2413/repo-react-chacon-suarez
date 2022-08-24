@@ -7,17 +7,16 @@ function TraerProductos(){
     const [data, setData] = React.useState([])
 
     
-    const idUrl = useParams.id
+    const idUrl = useParams().id
    
 
 
 
 
- const ItemDetailContainer = () => {
+ function ItemDetailContainer() {
     return new Promise((resolve) => {
 
-        let itemEncontrado = dataProductos.find((element) => element.id = idUrl)
-        resolve(itemEncontrado)   
+        resolve(dataProductos[idUrl-1])   
     })
  }
 
@@ -34,7 +33,6 @@ return(
     <div > 
             
                 <ItemDetail 
-                key={data.id}
                 img={data.img}
                 nombre={data.nombre}
                 descripcion={data.descripcion}

@@ -1,5 +1,5 @@
 import "./Card.css"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function Card({nombre, precio, descripcion, img, id}){
     return(
@@ -13,7 +13,7 @@ function Card({nombre, precio, descripcion, img, id}){
                         <h2>{nombre}</h2>
                         <p className="descripcion">{descripcion}</p>
                         <h3>${precio}</h3>
-                        <Link to={`/detalle/${id}`}>Ver mas</Link>
+                        <NavLink to={`/detalle/${id}`}>Ver mas</NavLink>
                     </div>
                 </div>
             </div>

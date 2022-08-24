@@ -21,9 +21,12 @@ React.useEffect(() => {
 }, [])
 
 return(
+
     <div className="menu">
+        <section className="menu">
         {dataProductos.map((element) => {
             return (
+                
                 <Card
                 key={element.id}
                 img={element.img}
@@ -34,6 +37,7 @@ return(
                 />
             )
         })}
+        </section>
     </div>
 )
 }
