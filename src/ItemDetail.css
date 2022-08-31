@@ -31,7 +31,7 @@
 }
 
 .boton-carrito{
-    margin-top: 25px;
+    margin-top: 15px;
     border-radius: 10px;
     font-size: 15px;
     transition: 0.2s all;
@@ -40,7 +40,7 @@
 
 }
 .boton-carrito:active{
-    transform: scale(1.2);
+    transform: scale(1.02);
 
 }
 

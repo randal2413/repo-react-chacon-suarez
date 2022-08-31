@@ -38,6 +38,7 @@ return(
                 descripcion={data.descripcion}
                 precio={data.precio}
                 id={data.id}
+                stock={data.stock}
                 />
             
         

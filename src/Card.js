@@ -5,6 +5,7 @@ function Card({nombre, precio, descripcion, img, id}){
     return(
         <div>
             <div>
+                
                 <div className="card">
                     <div className="card-img">
                         <img src={img} height="300" width="230" alt="imagen" />

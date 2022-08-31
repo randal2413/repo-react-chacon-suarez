@@ -1,6 +1,23 @@
 import "./ItemDetail.css"
+import ItemCount from "./ItemCount";
+import {useContext} from "react"
+import { cartContext } from "./cartContext";
+import { useState } from "react";
 
-function ItemDetail({nombre, precio, descripcion, img, id}){
+
+
+
+function ItemDetail({nombre, precio, descripcion, img, id, stock}){
+const {agregarCarrito} = useContext(cartContext)
+const [quantityInCart, setquantityInCart] = useState(0)
+
+  function handleAdd(cantidad){
+    setquantityInCart(cantidad)
+    const itemToCart = {nombre, precio, descripcion, img, id, stock}
+  agregarCarrito(itemToCart, cantidad)
+  }
+  
+
     return(
         <div className="detalleProducto">
 
@@ -19,9 +36,12 @@ function ItemDetail({nombre, precio, descripcion, img, id}){
             <button className="boton-talle">M</button>
             <button className="boton-talle">L</button>
             <button className="boton-talle">XL</button>
-            <div>
-            <button className="boton-carrito">AGREGAR AL CARRITO</button>
-            </div>
+            <h3>Stock Disponible: {stock} unidades</h3>
+            {quantityInCart === 0 ? (
+              <ItemCount initial={1} stock={stock} onAdd={handleAdd} />
+              ) : (
+                 <a href="#">Ir al carrito</a>
+              )}
             <h3>DESCRIPCION</h3>
             <p>{descripcion}</p>
             </div>
