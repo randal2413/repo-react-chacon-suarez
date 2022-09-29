@@ -7,7 +7,7 @@ const dataProductos = [
       precio: 4600,
       stock: 12,
       img: "https://i.pinimg.com/564x/09/42/b2/0942b29d3990a951abd39bd0356d3ee2.jpg",
-      descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit et eaque aspernatur, reprehenderit nobis cupiditate ipsum quidem dicta odio, repellat maiores, tenetur unde autem obcaecati facere voluptas minima sit voluptates!",
+      descripcion: "Lorem ipsums dolor sit amet, consectetur adipisicing elit. Velit et eaque aspernatur, reprehenderit nobis cupiditate ipsum quidem dicta odio, repellat maiores, tenetur unde autem obcaecati facere voluptas minima sit voluptates!",
     },
     {
       id: 2,
