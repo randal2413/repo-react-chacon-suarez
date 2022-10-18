@@ -21,7 +21,7 @@ const dataProductos = [
       id: 3,
       nombre: "Remera",
       precio: 3300,
-      stock: 30,
+      stock: 31,
       img: "https://i.pinimg.com/564x/b7/fd/91/b7fd91152d42a768cdf633e4ced1b1cb.jpg",
       descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit et eaque aspernatur, reprehenderit nobis cupiditate ipsum quidem dicta odio, repellat maiores, tenetur unde autem obcaecati facere voluptas minima sit voluptates!",
     },
